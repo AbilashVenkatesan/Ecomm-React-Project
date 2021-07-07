@@ -31,7 +31,7 @@ const Header = () => {
 		
 			<ul className="your-products">
 				<li className="wishlist"><a href="#" className="fav"><span className="material-icons" aria-label="Favourites">Wishlist</span></a></li>
-				<li className="your-cart"><a href="#" className="bag"><div className="material-icons" aria-label="Add to bag">Your Cart</div><span>0</span></a></li>
+				<li className="your-cart"><a href="#" className="bag"><span className="material-icons" aria-label="Add to bag">Your Cart</span><span>0</span></a></li>
 			</ul>
 		</header>
 	)
