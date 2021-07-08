@@ -13,7 +13,6 @@ body{
 /* header section */
 /* Styling for header */
 .page-header{
-    background:url(../img/toy-bg.jfif);
     background-color: #a05926;
     background-size: cover;
     background-blend-mode: multiply;
@@ -304,7 +303,6 @@ body{
 
     /* Styling for header */
     .page-header{
-        background:url(../img/toy-bg.jfif);
         background-color: #a05926;
         background-size: cover;
         background-blend-mode: multiply;
@@ -420,7 +418,6 @@ body{
 
     /* styling for header */
     .page-header{
-        background:url(../img/toy-bg.jfif);
         background-color: #a05926;
         background-size: cover;
         background-blend-mode: multiply;
