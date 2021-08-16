@@ -1,5 +1,5 @@
 import React from 'react'
-import Greeting from './Pages/Toys'
+import Toys from './Pages/Toys'
 
 const App = () => {
     const toys = [
