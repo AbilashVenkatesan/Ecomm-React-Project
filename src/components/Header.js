@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from 'img/e-comm logo.jpg'
-import menu from 'img/menu-button.jpg'
+import menu from '../img/menu-button.svg'
 
 const Header = () => {
 
