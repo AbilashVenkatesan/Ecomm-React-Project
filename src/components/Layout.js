@@ -10,15 +10,11 @@ const Layout = ({children}) => {
             <Header/>           
             <Promo/>  
             
-            <main>
-           
-            {children}
-           
-            
+            <main className="main">
+            {children} 
             </main>
 
             <Footer/>
-
         </div>
 	)
 }
