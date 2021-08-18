@@ -38,10 +38,11 @@ module.exports = {
 	},
     resolve: {
         alias: {
-            components: path.resolve(__dirname, 'src/components/'),
-            css: path.resolve(__dirname, 'src/css/'),
-            img: path.resolve(__dirname, 'src/img/'),
-			pages: path.resolve(__dirname, 'src/pages/'),
+			components: path.resolve(__dirname, 'src/components'),
+			contexts: path.resolve(__dirname, 'src/contexts'),
+			css: path.resolve(__dirname, 'src/css'),
+			pages: path.resolve(__dirname, 'src/pages'),
+			img: path.resolve(__dirname, 'src/img'),	
         }
     }
 }
