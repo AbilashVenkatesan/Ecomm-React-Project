@@ -51,10 +51,6 @@ const App = () => {
             <ToyPage />
           </Route>
 
-          <Route path="/Page404">
-            <Page404 />
-          </Route>
-
           <Route path="*" component={Page404} />
 			  </Switch>
      </Router>
