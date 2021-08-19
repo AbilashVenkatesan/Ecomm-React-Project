@@ -4,7 +4,7 @@ import 'css/index.css'
 import 'css/reset.css'
 import ProductContext from '../contexts/product'
 import ToyList from 'components/ToyList'
-import Filter from 'components/Filters'
+import Filters from 'components/Filters'
 
 //filter set-up in home page
 const HomePage = () => {
@@ -53,7 +53,7 @@ const HomePage = () => {
 			 <header className="heading">
              	<h1 className="promo"><p>Summer Sale is live!!!!</p></h1>
              </header>
-		 	<Filter filters={filters} setFilters={setFilters} />
+		 	<Filters filters={filters} setFilters={setFilters} />
 		 	<ToyList style={{display: "grid;"}} products={productResult} />
 		</main>
 
