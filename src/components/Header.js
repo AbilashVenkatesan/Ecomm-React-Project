@@ -33,8 +33,8 @@ const Header = () => {
 	
 			{/* <!-- links to wishlist and cart --> */}
 			<ul className="yourProducts">
-			<li class="wishlist"><a href="fav" class="link"><span class="material-icons" aria-label="Favourites">favorite_border</span>Wishlist</a></li>
-			<li class="your-cart"><a href="cart" class="link"><span class="material-icons" aria-label="Items in your cart">shopping_cart</span>Your cart</a></li>
+			<li><a href="fav"><span className="material-icons" aria-label="Favourites">favorite_border</span>Wishlist</a></li>
+			<li><a href="cart"><span className="material-icons" aria-label="Items in your cart">shopping_cart</span>Your cart</a></li>
 			</ul>
 		</header>
 	)
