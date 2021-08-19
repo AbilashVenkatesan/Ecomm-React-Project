@@ -7,13 +7,13 @@ import 'css/medium.css'
 import 'css/large.css'
 import 'css/extralarge.css'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import firebase from '../util/firebase'
+import firebase from './util/firebase'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 import ProductContext from 'contexts/product'
-import HomePage from '../pages/HomePage'
-import ToyPage from '../pages/ToyPage'
-import Page404 from '../pages/Page404';
+import HomePage from './pages/HomePage'
+import ToyPage from './pages/ToyPage'
+import Page404 from './pages/Page404';
 
 //gets all data from firebase
 const App = () => {

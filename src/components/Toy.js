@@ -56,8 +56,8 @@ const Toy = ({ id, img, name, price, desc, age}) => {
 
 			{/* footer section of the product */}
 			<footer className="prodFooter">
-				<button type="button" className="yourProduct"><a href="#" class="link"><span class="material-icons" aria-label="Favourites">favorite_border</span>Wishlist</a></button>
-				<button type="button" className="yourProduct"><a href="#" class="link"><span class="material-icons" aria-label="Items in your cart">shopping_cart</span>Add to cart</a></button>
+				<button type="button" className="yourProduct"><a href="#" className="link"><span className="material-icons" aria-label="Favourites">favorite_border</span>Wishlist</a></button>
+				<button type="button" className="yourProduct"><a href="#" className="link"><span className="material-icons" aria-label="Items in your cart">shopping_cart</span>Add to cart</a></button>
 			</footer>
   		</div>
 	)
