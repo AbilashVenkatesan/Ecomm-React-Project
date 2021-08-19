@@ -1,89 +1,58 @@
-import React from 'react'
-import Toys from '../pages/Toys'
+import React, { useState, useEffect } from 'react';
+import 'css/index.css'
+import 'css/reset.css'
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import firebase from '../util/firebase'
+import Header from 'components/Header'
+import Footer from 'components/Footer'
+import ProductContext from 'contexts/product'
+import HomePage from 'pages/HomePage'
+import ToyPage from 'pages/ToyPage'
+import Page404 from 'pages/Page404'
+
 
 const App = () => {
-    const toys = [
-        {
-            toyImg: 'Lego.jpg',
-            toyName: 'Sonic lego set',
-            toyDescription: 'rem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            actualPrice: '$49.99',
-            offerPrice: '$29.99',
-            toyCategory: 'General Toys',
-            toyId: 'general toys',
-            toyRating: 4.0,
-            toyAge: ['5-8', '8-12', '12-15'],
-            toyColor: ['pink', 'white', 'blue'],
-            toySize: ['md', 'lg', 'xl'],
-        },
-        {
-            toyImg: 'Chess set.jpg',
-            toyName: 'Chess Set',
-            toyDescription: 'rem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            actualPrice: '$79.99',
-            offerPrice: '$69.99',
-            toyCat: 'category-hidden',
-            toyRating: 5.0,
-            toyAge: ['2-5', '5-8', '8-12', '12-15', '15-18'],
-            toyColor: ['blue', 'white', 'blue'],
-            toySize: ['sm', 'md', 'lg'],
-        },
-        {
-            toyImg: 'Nerf.jpg',
-            toyName: 'Nerf Gun',
-            toyDescription: 'rem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            actualPrice: '$124.99',
-            offerPrice: '$99.99',
-            toyCategory: 'Toys for Boys',
-            toyId: 'boys',
-            toyRating: 3.4,
-            toyAge: ['5-8', '8-12', '12-15', '15-18'],
-            toyColor: ['yellow', 'white', 'blue'],
-            toySize: ['xs', 'sm', 'md'],
-        },
-        {
-            toyImg: 'Rc car.jpg',
-            toyName: 'Rc Car',
-            toyDescription: 'rem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            actualPrice: '$249.99',
-            offerPrice: '$199.99',
-            toyCat: 'category-hidden',
-            toyRating: 4.4,
-            toyAge: ['8-12', '12-15', '15-18'],
-            toyColor: ['yellow', 'black', 'blue'],
-            toySize: ['sm', 'md', 'lg'],
-        },
-        {
-            toyImg: 'Barbie.jpg',
-            toyName: 'Barbie',
-            toyDescription: 'rem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            actualPrice: '$59.99',
-            offerPrice: '$54.99',
-            toyCategory: 'Toys for Girls',
-            toyId: 'girls',
-            toyRating: 3.5,
-            toyAge: ['2-5', '5-8', '8-12'],
-            toyColor: ['pink', 'white', 'yellow'],
-            toySize: ['sm', 'md', 'lg'],
-        },
-        {
-            toyImg: 'Teddy.jpg',
-            toyName: 'Teddy bear set',
-            toyDescription: 'rem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            actualPrice: '$29.99',
-            offerPrice: '$19.99',
-            toyCat: 'category-hidden',
-            toyRating: 4.0,
-            toyAge: ['2-5', '5-8', '8-12'],
-            toyColor: ['pink', 'yellow','blue'],
-            toySize: ['sm', 'md', 'lg'],
-        }
-    
-    ];
-    
-	return (
-        <Toys data={toys}/>
-      )
-}
 
+  
+  const [toyList, settoyList] = useState([])
+
+  useEffect(() => {
+    const db = firebase.firestore()
+
+    db.collection(`Toys`).get().then(
+      (snapshot) => {
+        const toyData = []
+        console.log("Data obtained.")
+
+        snapshot.docs.forEach(doc => {
+          toyData.push(doc.data())
+        })
+
+      settoyList(toyData)
+    })
+  },[])
+
+return (
+  <ProductContext.Provider value={toyList}>
+    <Header>
+
+    </Header>
+    <Router>
+      <Switch>
+				<Route exact path="/">
+          <HomePage />
+        </Route>
+
+				<Route path="/product/:id">
+          <ToyPage />
+        </Route>
+
+        <Route path="*" component={Page404} />
+			</Switch>
+    </Router>
+
+    <Footer></Footer>
+    </ProductContext.Provider>
+)
+}
 export default App
