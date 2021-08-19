@@ -1,0 +1,67 @@
+/*extra-large viewport*/
+@media only screen and (min-width: 80em) {
+	.products {
+		display: grid;
+		grid-template-columns: 20em auto auto auto;
+	}
+
+    .view-product{
+        text-decoration: none;
+        color: black;
+        border: solid black 1px;
+        border-radius: .5em;
+        background-color: coral;
+    }
+	.prodCount{
+		display: grid;
+		margin-bottom: 5em;
+		margin-left: 50em;
+	}
+
+	.toyList {
+		display: grid;
+		grid-template-columns: auto 33% auto;
+	}
+
+	.main{
+		margin-left: 40em;
+		margin-bottom: 8em;
+	}
+
+	.filter-list {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+	.filters {
+		margin-bottom: 1em;
+		height: fit-content;
+		font-size: 16px;
+	}
+
+	.fieldset{
+		border:0 none;
+		display: flex;
+		justify-self: baseline;
+	}
+
+	.heading {
+		grid-column-start: 1;
+		grid-column-end: 5;
+	}
+	.results {
+		max-width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		background-color: #D8D9D3;
+		border-radius: 10px;
+	}
+	.subheading {
+		grid-column-start: 1;
+		grid-column-end: 4;
+	}
+	.filter-options{
+		display: block;
+		justify-content: space-between;
+	}
+
+}

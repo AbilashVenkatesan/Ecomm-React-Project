@@ -1,3 +1,4 @@
+/* default small viewport */
 html {
 	box-sizing: border-box;
 }
@@ -90,11 +91,11 @@ h1{
 }
 
 .view-product{
+	text-decoration: none;
+	color: black;
 	border: solid black 1px;
 	border-radius: .5em;
 	background-color: coral;
-	margin-right: 20em;
-	padding-left: .5em;
 }
 
 fieldset{
