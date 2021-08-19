@@ -23,8 +23,8 @@ const Toy = ({ id, img, name, price, desc, age}) => {
 				{/* pulls rest of the data and returns to output */}
 				<div  className="prodHeader">
 					<h3><Link to={`/product/${id}`} className="link">{name}</Link></h3>
-					<data value={price}>${price}/-</data>
-					<p>{desc}</p>
+					<data value={price}>Price: ${price}/-</data>
+					<h4>Description: </h4><p>{desc}</p>
 					<p><data value={age}>For: {age[0]}, {age[1]}, {age[2]} {age[3]}</data></p>	
 					<button type="button" className="view-product"><Link to={`/product/${id}`} className="link">View Product</Link></button>
 				</div>
