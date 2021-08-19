@@ -1,7 +1,8 @@
+//import files
 import React, { useState, useEffect } from 'react';
 import 'css/index.css'
 import 'css/reset.css'
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import firebase from '../util/firebase'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
@@ -18,6 +19,7 @@ const App = () => {
   useEffect(() => {
     const db = firebase.firestore()
 
+    //pulling data from firebase
     db.collection(`Toys`).get().then((snapshot) => {
         const toyData = []
         console.log("Data obtained.")
@@ -30,28 +32,29 @@ const App = () => {
     })
   },[])
 
-  //returns layout based on route
-return (
-  <ProductContext.Provider value={toyList}>
-    <Header>
-    </Header>
-    <Router>
-      <Switch>
-				<Route exact path="/">
-          <HomePage />
-        </Route>
+  //returns layout
+  return (
+    <ProductContext.Provider value={toyList}>
+      <Header>
+      </Header>
+      <Router>
+        <Switch>
+				  <Route exact path="/">
+           <HomePage />
+          </Route>
 
-				<Route path="/product/:id">
-          <ToyPage />
-        </Route>
+				  <Route path="/product/:id">
+            <ToyPage />
+          </Route>
 
-        <Route path="*" component={Page404} />
-			</Switch>
-    </Router>
+          <Route path="*" component={Page404} />
+			  </Switch>
+     </Router>
 
-    <Footer>
-    </Footer>
-    </ProductContext.Provider>
-)
+      <Footer>
+      </Footer>
+      </ProductContext.Provider>
+  )
 }
+
 export default App
