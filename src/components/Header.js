@@ -1,37 +1,38 @@
-import React from 'react';
-import logo from 'img/e-comm logo.jpg'
-import menu from '../img/menu-button.svg'
+import React from 'react'
+import 'css/index.css'
+import 'css/reset.css'
+import Logo from '../img/logo.jpg'
 
 const Header = () => {
 
-    return (
-        <header id="header" className="page-header">
-			<div className="logo">
-				<a href="index.html"> <img src={logo} alt="logo" width="100" /></a>
-			</div>
-
+	//return header section with logo, navigation button, wishlish and cart
+	return(
+	<header className="page-header">
+			<a href="/#" className="logo"><img src={Logo} alt="logo" /></a>
+	
+			{/* <!-- menu button for small viewport --> */}
+			<button type="button" className="nav-toggle">
+			<span className="material-icons">menu</span>
+			</button>
+			{/* navigation bar */}
 			<nav aria-label="Primary" className="navigation">
-				<div className="menu-toggle">
-					<a href="#"><img src={menu} alt="toggle-button" width="15" /></a>
-				</div>
-				<ul className="menu">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="#">Shop</a>
-						<ul className="sub-menu">
-							<li><a href="general toys">General Toys</a></li>
-							<li><a href="boys">For Boys</a></li>
-							<li><a href="girls">For Girls</a></li>
-							<li><a href="#">Sale</a></li>
-						</ul>
-					</li>
-					<li><a href="about us">About Us</a></li>
-					<li><a href="contact us">Contact Us</a></li>
+			<ul className="menu">
+				<li><a href="/#" className="link"><p className="nav-btn">Home</p></a>
+				<ul className="submenu">
+					<li><a href="#" className="link"><p className="nav-btn">General</p></a></li>
+					<li><a href="#" className="link"><p className="nav-btn">Boys</p></a></li>
+					<li><a href="#" className="link"><p className="nav-btn">Girls</p></a></li>
 				</ul>
+				</li>
+				<li><a href="#" className="link"><p className="nav-btn">About Us</p></a></li>
+				<li><a href="#" className="link"><p className="nav-btn">Contact Us</p></a></li>
+			</ul>
 			</nav>
-		
-			<ul className="your-products">
-				<li className="wishlist"><a href="#" className="fav"><span className="material-icons" aria-label="Favourites">Wishlist</span></a></li>
-				<li className="your-cart"><a href="#" className="bag"><span className="material-icons" aria-label="Add to bag">Your Cart</span><span>0</span></a></li>
+	
+			{/* <!-- links to wishlist and cart --> */}
+			<ul className="yourProducts">
+			<li class="wishlist"><a href="" class="link"><span class="material-icons" aria-label="Favourites">favorite_border</span>Wishlist</a></li>
+			<li class="your-cart"><a href="#" class="link"><span class="material-icons" aria-label="Items in your cart">shopping_cart</span>Your cart</a></li>
 			</ul>
 		</header>
 	)
