@@ -1,0 +1,142 @@
+/*Large*/
+@media only screen and (min-width: 40em) {
+	.page-header{
+		grid-template-columns: auto 1fr auto auto auto;
+	}
+	.nav-toggle{
+		display: none;
+	}
+	
+	.navigation{
+		grid-row-start: 2;
+		grid-row-end: 3;
+		grid-column-start: 1;
+		grid-column-end: 6;
+		display: inline;
+	}
+
+	.yourProducts{
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-column-start: 5;
+		grid-column-end: 6;
+	}
+
+	.menu {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.menu > li {
+		display: flex;
+		margin: 0px 3%;
+	}
+	.submenu{
+		display: flex;
+		padding-left: 0;
+		margin-left: 3%;
+	}
+
+	.submenu>li{
+		margin-right: 1em;
+		margin-left: 1em;
+	}
+
+	.promo{
+		margin-top: -.1em;
+		margin-left: 0em;
+		margin-right: 0em;
+		padding: 2em;
+		background-image: url(../img/promo.jpg);
+		background-position-y: -7em;
+		background-color:tan;
+		background-blend-mode: multiply;
+		background-repeat: no-repeat;
+		color: white;
+	}
+
+	.promo>p{
+		font-size:larger;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+
+	.products{
+		display: block;
+	}
+
+    
+	.filters {
+		position: relative;
+		margin-bottom: 7em;
+		height: auto;
+		font-size: 16px;
+	}
+
+	.results {
+		max-width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.subheading {
+		display: block;
+		grid-column-start: 1;
+		grid-column-end: 3;
+		text-align: center;
+		font-size: 36px;
+		margin-top: 0px;
+	}
+
+	.filters > h2 {
+		display: block;
+		font-size: 36px;
+		text-align: center;
+		padding-top: 0px;
+	}
+    
+	.toyList {
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+
+	.page-footer{
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"social legal"
+		"copyright copyright";
+		padding: 1em;
+		margin-top: -4em;
+		color: burlywood;
+		background: rgba(0, 0, 0);
+		min-width: 100%;
+	}
+
+	.about{
+		display: none;
+	}
+	
+	.social{
+		grid-area: social;
+		justify-self: center;
+	}
+	
+	.legal{
+		grid-area: legal;
+		justify-self: center;
+	}
+	
+	.copyright{
+		grid-area: copyright;
+		justify-self: center;
+	}
+
+	.footer-link{
+		text-decoration: none;
+		color: burlywood;
+	}
+}
