@@ -1,7 +1,11 @@
 //import files
 import React from 'react'
+//import style files
 import 'css/index.css'
 import 'css/reset.css'
+import 'css/medium.css'
+import 'css/large.css'
+import 'css/extralarge.css'
 //import img for logo
 import Logo from '../img/logo.png'
 

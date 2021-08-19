@@ -1,7 +1,11 @@
 //import file
 import React from 'react'
+//import style files
 import 'css/index.css'
 import 'css/reset.css'
+import 'css/medium.css'
+import 'css/large.css'
+import 'css/extralarge.css'
 
 const Footer = () => {
     //returns the footer of the webstore

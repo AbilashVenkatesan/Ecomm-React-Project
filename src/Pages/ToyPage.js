@@ -1,7 +1,11 @@
 //import files
 import React, {useContext} from 'react'
+//import style files
 import 'css/index.css'
 import 'css/reset.css'
+import 'css/medium.css'
+import 'css/large.css'
+import 'css/extralarge.css'
 import {useParams} from 'react-router-dom'
 import Toy from 'components/Toy'
 import ProductContext from 'contexts/product'

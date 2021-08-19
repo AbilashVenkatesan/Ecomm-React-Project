@@ -1,7 +1,11 @@
 //import files
 import React, { useState, useEffect } from 'react';
+//import style files
 import 'css/index.css'
 import 'css/reset.css'
+import 'css/medium.css'
+import 'css/large.css'
+import 'css/extralarge.css'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import firebase from '../util/firebase'
 import Header from 'components/Header'

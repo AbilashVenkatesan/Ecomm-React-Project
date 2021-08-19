@@ -1,7 +1,11 @@
 //import files
 import React, {useContext, useEffect, useState} from 'react'
+//import style files
 import 'css/index.css'
 import 'css/reset.css'
+import 'css/medium.css'
+import 'css/large.css'
+import 'css/extralarge.css'
 import ProductContext from '../contexts/product'
 import ToyList from 'components/ToyList'
 import Filters from 'components/Filters'

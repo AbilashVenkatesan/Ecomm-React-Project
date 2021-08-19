@@ -1,7 +1,11 @@
 //import files
 import React from 'React'
+//import style files
 import 'css/index.css'
 import 'css/reset.css'
+import 'css/medium.css'
+import 'css/large.css'
+import 'css/extralarge.css'
 import Toy from 'components/Toy.js'
 
 const ToyList = ({ products }) => {
