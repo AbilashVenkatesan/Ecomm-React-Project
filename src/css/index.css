@@ -1,662 +1,248 @@
-body {
-	margin: 0;
-	background-color: lightgrey;
-	font: 1em helvetica, arial, sans-serif;
+html {
+	box-sizing: border-box;
 }
 
-/* --------------------------small viewport------------------------ */
-/* Styling for body */
 body{
-    background-color: burlywood;
+	font-weight: 200;
+	font-family: serif;
+	width: 100%; 
 }
 
-/* header section */
-/* Styling for header */
 .page-header{
-    background-color: #a05926;
-    background-size: cover;
-    background-blend-mode: multiply;
-    background-repeat: no-repeat;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "logo search menu"
-    "logo your-products .";
-    padding-bottom: 0em;
+	display: grid;
+	grid-template-columns: auto 1fr auto auto;
+	padding: 0px var(--pad-and-gap);
+	align-items: center;
+	background-color: tan;
 }
 
-/* logo alignment */
-.logo{
-    grid-area: logo;
-    justify-self: left;
-    width: 100px;
-    height: 100px;
+.img {
+	max-width: 100%;
 }
 
-/* menu bar */
-.dropdown{
-    grid-area: menu;
-    display: flex;
-    justify-content: flex-end;
-    padding-bottom: 4em;
+.nav-btn{
+	border: solid white 1px;
+	background-color: white;
+	color:coral;
+	border-radius: .5em;
+	padding: .5em;
+	font-weight: bold;
 }
 
-/* menu nav */
-.nav-toggle{
-    background-color: burlywood;
+.products{
+	padding: 0px var(--pad-and-gap);
 }
 
-.navigation{
-    display: none;
-}
-
-.show{
-    display: block;
-    background-color: chocolate;
-    z-index: 1;
-}
-
-/* search bar */
-.search{
-    grid-area: search;
-    justify-self: center;
-    color: whitesmoke;
-    padding-bottom: .5em;
-}
-
-.search-icon{
-    background-color: burlywood;
-}
-
-/* cart */
-.your-products{
-    grid-area: your-products;
-    justify-self: center;
-    display: flex;
-    justify-content: flex-end;
-    padding-left: .5em;
-    margin-top: -2.5em;
-}
-
-.your-cart{
-    padding: .25em;
-    background-color: burlywood;
-    color: black;
-    border-radius: .0em;
-    margin-left: .5em;
-    max-height: 2em;
-}
-
-/* wishlist */
-.wishlist{
-    padding: .25em;
-    background-color: burlywood;
-    color: black;
-    border-radius: 0em;
-    margin-right: .5em;
-    max-height: 2em;
-}
-
-/* products */
-.product{
-    display: grid;
-    margin-bottom: .5em;
-    margin-top: -.25em;
-}
-
-/* Styling for heading */
-.heading{
-    color: black;
-    border: 1px solid black;
-    background-color: chocolate;
-    margin-top: .25em;
-}
-
-.heading>h1{
-    margin-top: .25em;
-    margin-bottom: .25em;
-}
-
-.category-hidden{
-    display: none;
-}
-
-/* Styling for heading results */
-.subheading{
-    grid-area: heading;
-    margin-top: .25em;
-    margin-bottom: 1.5em;
-    color: chocolate;
-    border: 1px solid black;
-    background-color: black;
-}
-  
-
-/* styling for filters */
-.filters{
-    padding: 2px;
-    margin-top: .25em;
-    border: 1px solid;
-    border-color: black;
-    color: chocolate;
-    background-color: rgba(0, 0, 0, .8)
-}
-
-.filter-options{
-    margin-top: -.5em;
-}
-
-.sort{
-    background-color: burlywood;
-}
-
-/* styling for h2 */
-.results>h2{
-    margin-top: .5em;
-    margin-bottom: 1.3em;
-    padding-top: .2em;
-    padding-bottom: .2em;
-    background-color: chocolate;
-}
-
-/* products */
-.product{
-    margin-top: -2em;
-    margin-bottom: 4em;
-    padding: .5em;
-    border: 1px solid;
-    border-color: black;
-    color: chocolate;
-    background-color: rgba(0, 0, 0, .8);
-}
-
-.product>header>h3>a{
-    text-decoration: none;
-    color: chocolate;
-}
-
-/* view product button */
-.view-product{
-    background-color: burlywood;
-}
-
-/* footer of each product */
-.product-footer{
-    margin-top: .5em;
-    background-color: burlywood;
-}
-
-/* style for pagination */
-.pages{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    justify-content: center;
-}
-
-.page-num{
-    background-color: chocolate;
-    padding-left: 2.5px;
-    padding-right: 2.5px;
-}
-
-.pagination{
-    grid-area: pagination;
-    justify-self: center;
-    color:chocolate;
-}
-
-.false{
-    display: none;
-}
-
-.back-top>a{
-    text-decoration: none;
-    color: black;
-    background-color: chocolate;
-    border: 1px solid black;
-}
-
-/* styling for footer */
-.page-footer{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "social legal"
-    "copyright copyright";
-    padding: 1em;
-    margin-top: -4em;
-    color: burlywood;
-    background: rgba(0, 0, 0);
-}
-
-.about{
-    display: none;
-}
-
-.social{
-    grid-area: social;
-    justify-self: center;
-}
-
-.legal{
-    grid-area: legal;
-    justify-self: center;
-}
-
-.copyright{
-    grid-area: copyright;
-    justify-self: center;
+.prodCount{
+	margin-bottom: 5em;
 }
 
 .link{
-    text-decoration: none;
-    color: black;
+	text-decoration: none;
+	color: black;
 }
 
-.footer-link{
-    text-decoration: none;
-    color: burlywood;
+li {
+	list-style-type: none;
 }
 
- /* styling pagination */
- .pagination{
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    color: chocolate;
-    margin-top: -4em;
-    /* margin-left: -22.5em; */
-    margin-bottom: .5em;
-}    
-
-
-/* styling for back to top buton */
-.back-top>a{
-    text-decoration: none;
-    color: black;
-    background-color: chocolate;
-    border: 1px solid black;
-    margin-left: 2.5em;
+.my-btn{
+	border: solid black 1px;
+	border-radius: .5em;
+	padding: .5em;
+	margin-top: 2em;
+	margin-left: 30em;
+	background-color: coral;
+	text-decoration: none;
+	color: black;
+	margin-left: 12.5em;
 }
 
-/* styling footer */
+.yourProduct{
+	border: solid black 1px;
+	border-radius: .5em;
+	padding: em;
+	background-color: coral;
+	text-decoration: none;
+	color: black;
+}
+
+h1, h2 {
+	font-family: serif;
+}
+
+h1{
+	text-align: center;
+	margin: 15px;
+	font-size: 70px;
+}
+
+.product {
+	max-width: 30em;
+	min-height: 50em;
+	margin: 2em;
+	border: solid black 1px;
+	background-color: tan;
+}
+
+.prodHeader{
+	margin-left: 1em;
+}
+
+.view-product{
+	border: solid black 1px;
+	border-radius: .5em;
+	background-color: coral;
+	margin-right: 20em;
+	padding-left: .5em;
+}
+
+fieldset{
+	border:0 none;
+	display: flex;
+	justify-self: baseline;
+}
+
+.color-size{
+	display: flex;
+	justify-content: space-evenly;
+	border: solid black 1px;
+	margin: 1em;
+}
+
+.searchIcon{
+	border: none;
+	margin-left: .5em;
+	max-width: 2.5em;
+}
+
+.prodFooter{
+	display: flex;
+	margin-top: 2em;
+	justify-content: center ;
+	justify-content: space-evenly;
+}
+
+input.checkBoxStyle {
+	display: none;
+}
+
+input.checkBoxStyle + label > span{
+	display: inline-block;
+	margin-right: 0.5em;
+	width: 1.7em;
+	height: 1.6em;
+	background-image: url('../img/beachballblack.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+input.checkBoxStyle:checked + label > span {
+	background-image: url('../img/beachballcolor.png');
+}
+
+.yourProducts {
+	display: flex;
+	padding: 2em;;
+}
+
+.yourProducts>li{
+	padding-right: 2em;
+}
+
+legend {
+	font-weight: bold;	
+}
+
+.logo {
+	grid-row-start: 1;
+	grid-row-end: 3;
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+.logo>img {
+		margin: .25em;
+		height: 10em;
+}
+
+.nav-toggle {
+	grid-column-start: 4;
+	grid-column-end: 5;
+	height: 2em;
+}
+
+.navigation {
+	display: none;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	grid-column-start: 1;
+	grid-column-end: 5;
+}
+
+.promo{
+	display: grid;
+	margin-top: -.1em;
+	margin-left: 0em;
+	margin-right: 0em;
+	padding: 2em;
+	background-image: url(../img/promo.jpg);
+	background-position-y: -7em;
+	background-color:tan;
+	background-blend-mode: multiply;
+	background-repeat: no-repeat;
+	color: white;
+}
+
+.promo>p{
+	font-size:.25em;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
 .page-footer{
-    display: grid;
-    grid-template-areas: 
-    "about about"
-    "social legal"
-    "copyright copyright";
-    margin-top: -1.2em;
-}
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"social legal"
+		"copyright copyright";
+		color: burlywood;
+		background: rgba(0, 0, 0);
+		min-width: 100%;
+	}
 
-/* --------------Medium Viewport-------------- */
-/* styling body and setting viewport */
-@media only screen and (min-width: 40em){
-    body{
-        background-color: burlywood;
-        /* border: 10px solid;
-        border-color: white; */
-    }
+	.aboutUs{
+		display: none;
+	}
+	
+	.social{
+		grid-area: social;
+		justify-self: center;
+	}
 
-    /* Styling for header */
-    .page-header{
-        background-color: #a05926;
-        background-size: cover;
-        background-blend-mode: multiply;
-        background-repeat: no-repeat;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "logo search menu"
-        "logo your-products .";
-        padding-bottom: 0em;
-    }
+	.social, .legal {
+		display: flex;
+		justify-content: flex-end;
+		margin-left: -10em;
+	}
+	
+	.social > li , .legal >li {
+		margin: 5px 10px;
+	}
+	
+	.legal{
+		grid-area: legal;
+		justify-self: center;
+	}
+	
+	.copyright{
+		grid-area: copyright;
+		justify-self: center;
+	}
 
-    /* Styling for h1 */
-    .heading>h1{
-        color: black;
-    }
-
-    /* styling for product content */
-    .results{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "heading heading"
-        "product";
-        gap: .5em;
-    }
-
-    /* Styling for heading results */
-    .subheading{
-        grid-area: heading;
-        margin-top: .25em;
-        margin-bottom: 1.5em;
-        color: chocolate;
-        border: 1px solid black;
-        background-color: black;
-    }
-      
-    .logo{
-        grid-area: logo;
-    }
-
-    .search{
-        grid-area: search;
-    }
-
-    .dropdown{
-        grid-area: menu;
-    }
-
-    .your-products{
-        grid-area: your-products;
-        margin-top: -2.5em;
-    }
-
-    .wishlist{
-        max-height: 2em;
-    }
-
-.your-products{
-    max-height: 2em;
-}
-
-    .toys{
-        display: none;
-    }
-
-    .product{
-        min-height: 58em;
-        margin-right: 1px;
-        margin-left: 1px;
-    }
-
-     /* styling pagination */
-     .pagination{
-        display: grid;
-        justify-content: left;
-        align-content: center;
-        color: chocolate;
-        margin-top: -4em;
-        margin-left: -6em;
-        margin-bottom: .5em;
-    }    
-
-    /* styling for back to top buton */
-    .back-top>a{
-        text-decoration: none;
-        color: black;
-        background-color: chocolate;
-        border: 1px solid black;
-        margin-left: 2.5em;
-    }
-
-    /* styling footer */
-    .page-footer{
-        display: grid;
-        grid-template-areas: 
-        "about about"
-        "social legal"
-        "copyright copyright";
-        margin-top: -1.2em;
-    }
-}
-/* --------------Large Viewport--------------- */
-/* styling body and setting viewport */
-@media only screen and (min-width: 70em){
-    body{
-        background-color: burlywood;
-        /* border: 10px solid;
-        border-color: white; */
-    }
-
-    /* styling for header */
-    .page-header{
-        background-color: #a05926;
-        background-size: cover;
-        background-blend-mode: multiply;
-        background-repeat: no-repeat;
-        display: grid;
-        grid-template-columns: .25fr 2fr .75fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "logo search your-products"
-        "logo menu .";
-        padding-bottom: 0em;
-    }
-    
-    /* aligning logo */
-    .logo{
-        grid-area: logo;
-        max-width: 100%;
-    }
-
-    /* styling search bar */
-    .search{
-        grid-area: search;
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        margin-top: -1.5em;
-        margin-bottom: -1.5em;
-        padding-bottom: -5em;
-    }
-    
-    .search-icon{
-        padding-bottom: 1.2em;
-        height: 25px;
-    }
-
-    /* cart */
-    .your-products{
-        grid-area: your-products;
-        justify-self: right;
-        /* padding-top: .75em; */
-        padding-right: .5em;
-        margin-top: 2em;
-    }
-
-    .your-cart{
-        padding:-.5em;
-    }
-
-    /* wishlist */
-    .wishlist{
-        padding-bottom: -.5em;
-    }
-
-    /* styling menu bar */
-    .dropdown{
-        grid-area: menu;
-        justify-self: center;
-        padding-top: -5em;
-        padding-bottom: -3em;
-        margin-bottom: -3em;
-    }
-
-    /* hover function for navigation */
-    .navigation ul ul li a:hover,
-.navigation ul li a:hover
-{
-    background: black;
-    color: chocolate;
-}
-
-    .menu ul ul li a:hover,
-    .menu ul li.active ul li a:hover,
-    .menu ul li:hover ul li a:hover 
-    {
-    background: black;
-    color: chocolate;
-    }
-
-    nav,.nav-toggle{
-        display: none;
-    }
-
-    /* styling for navigation */
-    .navigation{
-        grid-area: menu;
-        display: inline-flex;
-        margin-bottom: -2em;
-    }
-
-    nav,.menu{
-        grid-area: menu;
-        display: inline-flex;
-    }
-
-    nav,.submenu{
-        grid-area: menu;
-        display: inline-flex;
-        justify-content: space-evenly;
-        align-content: space-between;
-    }
-
-    /* styling for menu button */
-    .menu-button{
-        border: 1px black;
-        background-color: burlywood;
-        color: black;
-        text-decoration: none;
-        margin: .2em;
-        padding: .2em;
-    }
-    
-/* =============== Main Class ================= */
-    /* styling products */
-    .products{
-        display: grid;
-        grid-template-columns: 1fr 4fr;
-        grid-template-areas: 
-        "heading heading"
-        "filters subheading"
-        "filters results";
-        gap: 0.5em;
-    }
-
-    /* styling headings */
-    .heading{
-        grid-area: heading;
-        margin-bottom: .5em;
-    }
-
-    /* styling filters */
-    .filters{
-        grid-area: filters;
-        margin-right: .5em;
-        margin-top: -1em;
-    }
-/* =====sort======== */
-    .sort{
-        background-color: burlywood;
-    }
-
-    /* styling result content */
-    /* .results{
-        grid-area: results;
-        /* margin-top: -.8em;
-        margin-left: 1.5px;
-        margin-right: 5rem;
-        padding-top: 0%;
-        padding-bottom: -.5em;
-        border: 1px solid;
-        border-color:black;
-        background-color: rgba(0, 0, 0, .8);
-        margin-bottom: 0px;
-    } */
-
-    /* toys grid */
-    .results {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        gap: 1rem;
-    }
-    /* subheading */
-    .subheading {
-        grid-area: subheading;
-        display: grid;
-        justify-content: center;
-        align-content: center;
-        color: chocolate;
-        border: 1px solid black;
-        background-color: black;
-        margin-top: -.5em;
-    }
-    .product{
-        display: grid;
-        min-height: 50em;
-        margin-bottom: 2em;
-    }
-
-    /* .product1 .product{
-        margin-bottom: 0em;
-        padding-bottom: .5em;
-    }
-    .product3 .product{
-        margin-bottom: 0em;
-        padding-bottom: .5em;
-    }
-    .product5 .product{
-        margin-bottom: 0em;
-        padding-bottom: .5em;
-    } */
-
-    /* styling pagination */
-    .pagination{
-        display: grid;
-        justify-content: center;
-        align-content: center;
-        color: chocolate;
-        margin-top: -2em;
-        margin-left: -45em;
-        padding-bottom: 1em;
-    }    
-
-    .back-top{
-        text-decoration: none;
-        color: black;
-    }
-
-    .pages{
-        justify-content: center;
-    }
-
-    .page-num{
-        justify-self: center;
-    }
-
-    /* styling footer */
-    .page-footer{
-        display: grid;
-        grid-template-areas: 
-        "about about"
-        "social legal"
-        "copyright copyright";
-        margin-top: -1.2em;
-    }
-
-    .about{
-        display: inline;
-        grid-area: about;
-    }
-
-    .social{
-        grid-area: social;
-    }
-
-    .legal{
-        grid-area: legal;
-    }
-
-    .copyright{
-        grid-area: copyright;
-    }
-}
+	.footer-link{
+		text-decoration: none;
+		color: burlywood;
+	}
