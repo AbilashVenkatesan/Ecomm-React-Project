@@ -6,6 +6,6 @@ import 'css/reset.css'
 import 'css/medium.css'
 import 'css/large.css'
 import 'css/extralarge.css'
-import App from './App'
+import App from './components/App'
 
 ReactDOM.render(<App />, document.getElementById('root'))
