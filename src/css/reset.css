@@ -85,3 +85,22 @@ legend.legend {
 	border-color: initial;
 	border-image: initial;
 }
+
+.nav-btn:hover {
+	background: #ddd;
+	color: black;
+  }
+
+.my-btn:hover{
+	background: #ddd;
+	color: black;
+}
+
+.view-product:hover {
+	background: #ddd;
+	color: black;
+  }
+
+  .link:hover{
+	color: whitesmoke;
+  }
