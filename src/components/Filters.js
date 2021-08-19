@@ -36,7 +36,7 @@ const Filters = ({filters, setFilters}) => {
           <fieldset>
             <legend>Age</legend>
               <ul className="filter-list">
-                <li><input type="radio" className="checkBoxStyle" name="age" value="all" id="all" onChange={Handleage} checked={(filters.age === `all`) ? true : false}></input><label htmlFor="all"><span></span>All Age</label></li>
+                <li><input type="radio" className="checkBoxStyle" name="age" value="all" id="all" onChange={Handleage} checked={(filters.age === `all`)}></input><label htmlFor="all"><span></span>All Age</label></li>
                 <li><input type="radio" className="checkBoxStyle" name="age" value="toddler" id="toddler" onChange={Handleage}></input> <label htmlFor="toddler"><span></span>Toddler</label></li>
                 <li><input type="radio" className="checkBoxStyle" name="age" value="child" id="child" onChange={Handleage}></input> <label htmlFor="child"><span></span>Child</label></li>
                 <li><input type="radio" className="checkBoxStyle" name="age" value="kids" id="kids" onChange={Handleage}></input> <label htmlFor="kids"><span></span>Kids</label></li>

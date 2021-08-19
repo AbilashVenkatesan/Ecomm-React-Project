@@ -3,7 +3,7 @@ import React from 'react'
 import 'css/index.css'
 import 'css/reset.css'
 //import img for logo
-import Logo from '../img/logo.jpg'
+import Logo from '../img/logo.png'
 
 const Header = () => {
 
