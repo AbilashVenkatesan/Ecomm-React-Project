@@ -1,5 +1,5 @@
 //import files
-import React from 'React'
+import React from 'react'
 //import style files
 import 'css/index.css'
 import 'css/reset.css'
