@@ -13,7 +13,7 @@ import Footer from 'components/Footer'
 import ProductContext from 'contexts/product'
 import HomePage from './Pages/HomePage'
 import ToyPage from './Pages/ToyPage'
-import Page404 from './Pages/Page404';
+import Page404 from './Pages/Page404'
 
 //gets all data from firebase
 const App = () => {
