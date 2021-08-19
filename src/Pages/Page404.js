@@ -1,7 +1,9 @@
+//import files
 import React from 'react'
 import 'css/index.css'
 import 'css/reset.css'
 import {Link} from 'react-router-dom'
+//import img
 import Error from '../img/404.png'
 
 //returns this page when error 404 happens
