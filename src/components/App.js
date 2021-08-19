@@ -10,17 +10,15 @@ import HomePage from 'pages/HomePage'
 import ToyPage from 'pages/ToyPage'
 import Page404 from 'pages/Page404'
 
-
+//gets all data from firebase
 const App = () => {
-
   
   const [toyList, settoyList] = useState([])
-
+  
   useEffect(() => {
     const db = firebase.firestore()
 
-    db.collection(`Toys`).get().then(
-      (snapshot) => {
+    db.collection(`Toys`).get().then((snapshot) => {
         const toyData = []
         console.log("Data obtained.")
 
@@ -32,10 +30,10 @@ const App = () => {
     })
   },[])
 
+  //returns layout based on route
 return (
   <ProductContext.Provider value={toyList}>
     <Header>
-
     </Header>
     <Router>
       <Switch>
@@ -51,7 +49,8 @@ return (
 			</Switch>
     </Router>
 
-    <Footer></Footer>
+    <Footer>
+    </Footer>
     </ProductContext.Provider>
 )
 }
