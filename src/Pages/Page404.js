@@ -12,7 +12,7 @@ const Page404 = () => {
     <div style={{textAlign: "center", width: "70vw", margin: "auto"}}>
       <h2>The page you are looking for doesn't exist.</h2>
       <Link to="/"><p>Go back.</p></Link>
-	  <img alt={"404"}src={Error} />
+	  <img style={{width: "50em", padding: "10em", margin: "center" }} alt={"404"}src={Error} />
 	  </div>
   )
 }
