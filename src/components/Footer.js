@@ -6,6 +6,9 @@ import 'css/reset.css'
 import 'css/medium.css'
 import 'css/large.css'
 import 'css/extralarge.css'
+import Facebook from '../img/fb.png'
+import Insta from '../img/insta.png'
+import Twitter from '../img/twitter.png'
 
 const Footer = () => {
     //returns the footer of the webstore
@@ -19,9 +22,9 @@ const Footer = () => {
 
             {/* social links */}
             <ul id="contact-us" className="social">
-                <li><a href="#" className="footer-link"><img src='src/img/fb.png' alt="facebook icon" width="15"></img>Facebook</a></li>
-                <li><a href="#" className="footer-link"><img src='src/img/insta.png' alt="instagram icon" width="15"></img>Instagram</a></li>
-                <li><a href="#" className="footer-link"><img src='src/img/twitter.png' alt="twitter icon" width="15"></img>Twitter</a></li>
+                <li><a href="#" className="footer-link"><img alt={"fb"}src={Facebook} />Facebook</a></li>
+                <li><a href="#" className="footer-link"><img alt={"isnta"}src={Insta} />Instagram</a></li>
+                <li><a href="#" className="footer-link"><img alt={"twitter"}src={Twitter} />Twitter</a></li>
             </ul>
 
             {/* legal links */}
