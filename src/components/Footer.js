@@ -22,9 +22,9 @@ const Footer = () => {
 
             {/* social links */}
             <ul id="contact-us" className="social">
-                <li><a href="#" className="footer-link"><img style={{width: "2em"}} alt={"fb"}src={Facebook} />Facebook</a></li>
-                <li><a href="#" className="footer-link"><img style={{width: "2em"}} alt={"isnta"}src={Insta} />Instagram</a></li>
-                <li><a href="#" className="footer-link"><img style={{width: "2em"}} alt={"twitter"}src={Twitter} />Twitter</a></li>
+                <li><a href="#" className="footer-link"><img style={{width: "1em"}} alt={"fb"}src={Facebook} />Facebook</a></li>
+                <li><a href="#" className="footer-link"><img style={{width: "1em"}} alt={"isnta"}src={Insta} />Instagram</a></li>
+                <li><a href="#" className="footer-link"><img style={{width: "1em"}} alt={"twitter"}src={Twitter} />Twitter</a></li>
             </ul>
 
             {/* legal links */}

@@ -36,7 +36,7 @@ const App = () => {
     })
   },[])
 
-  //returns layout
+  //returns result in this layout
   return (
     <ProductContext.Provider value={toyList}>
       <Header>
@@ -49,6 +49,10 @@ const App = () => {
 
 				  <Route path="/product/:id">
             <ToyPage />
+          </Route>
+
+          <Route path="/Page404">
+            <Page404 />
           </Route>
 
           <Route path="*" component={Page404} />
